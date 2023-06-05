@@ -13,17 +13,19 @@ class CountUpState extends State<CountUpApp> {
   int _counter = 0;
 
   void _incrementCounter() {
-    setState(() {
-      if (_counter < 100) {
+    if (_counter < 100) {
+      setState(() {
         _counter++;
-      } else {
+      });
+    } else {
+      setState(() {
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(
             content: Text('100が限界です'),
           ),
         );
-      }
-    });
+      });
+    }
   }
 
   @override
