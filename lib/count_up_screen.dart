@@ -18,13 +18,11 @@ class CountUpState extends State<CountUpApp> {
         _counter++;
       });
     } else {
-      setState(() {
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(
-            content: Text('100が限界です'),
-          ),
-        );
-      });
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text('100が限界です'),
+        ),
+      );
     }
   }
 
@@ -40,7 +38,7 @@ class CountUpState extends State<CountUpApp> {
           children: <Widget>[
             Text(
               '$_counter',
-              style: const TextStyle(fontSize: 48.0),
+              style: const TextStyle(fontSize: 48),
             ),
             const SizedBox(height: 28),
             ElevatedButton.icon(

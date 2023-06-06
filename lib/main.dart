@@ -8,13 +8,13 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  final title = 'Flutter_issue1_カウントアップ';
+  String get title => 'Flutter_issue1_カウントアップ';
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      home: CountUpApp(title: title)
+      home: CountUpApp(title: title),
     );
   }
 }
