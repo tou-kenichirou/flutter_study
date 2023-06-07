@@ -42,6 +42,7 @@ class TodoListState extends State<TodoListApp> {
                 setState(() {
                   _todoList.removeAt(index);
                 });
+                Navigator.of(context).pop();
               },
               child: const Text('OK'),
             ),
