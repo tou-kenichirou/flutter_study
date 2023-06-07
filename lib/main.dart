@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_study/count_up_screen.dart';
+import 'package:flutter_study/todo_list_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -8,13 +8,13 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  String get title => 'Flutter_issue1_カウントアップ';
+  String get title => 'Flutter_issue2_ToDoリスト';
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      home: CountUpApp(title: title),
+      home: TodoListApp(title: title),
     );
   }
 }
