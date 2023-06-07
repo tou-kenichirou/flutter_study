@@ -100,6 +100,13 @@ class TodoListState extends State<TodoListApp> {
   }
 
   @override
+  void dispose() {
+    super.dispose();
+    _addListController.dispose();
+    _editController.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
