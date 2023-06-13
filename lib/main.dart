@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_study/todo_list_screen.dart';
+import 'package:flutter_study/stopwatch_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -8,13 +8,13 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  String get title => 'Flutter_issue2_ToDoリスト';
+  String get title => 'Flutter_issue3_ストップウォッチ';
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      home: TodoListApp(title: title),
+      home: StopwatchApp(title: title,),
     );
   }
 }
