@@ -9,9 +9,10 @@ extension StringExtension on String {
     final isbn13 = replaceFirst('-', '');
     final isbn = isbn13.substring(startIsbn10, endIsbn10);
     var sum = sumDefault;
-    for (var i = 0; i <= isbn.length - 1; i++) {
-      sum += int.parse(isbn[i]) * (checkDigitXValue - i);
-    }
+    sum = isbn.split('').asMap().entries.map((e) {
+      return int.parse(e.value) * (e.key + 1);
+    }).reduce((value, element) => value + element);
+
     sum = checkDigitValue - (sum % checkDigitValue);
     String sumString;
     if (sum == checkDigitXValue) {
