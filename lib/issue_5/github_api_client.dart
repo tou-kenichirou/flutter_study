@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:flutter_study/get_github_repository.dart';
+import 'package:flutter_study/issue_5/get_github_repository.dart';
 import 'package:retrofit/retrofit.dart';
 
 part 'github_api_client.g.dart';

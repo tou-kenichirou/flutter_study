@@ -2,7 +2,7 @@ import 'package:barcode_scan2/platform_wrapper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_study/extension/string_extension.dart';
-import 'package:flutter_study/webview_screen.dart';
+import 'package:flutter_study/issue_4/webview_screen.dart';
 
 class BarcodeScanApp extends StatefulWidget {
   const BarcodeScanApp({super.key, required this.title});
