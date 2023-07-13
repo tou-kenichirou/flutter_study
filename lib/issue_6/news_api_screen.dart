@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'news_facorites_screen.dart';
+import 'news_favorites_screen.dart';
 import 'news_main_screen.dart';
 
 class NewsAPIApp extends StatefulWidget {
