@@ -41,6 +41,7 @@ dependencies:
   infinite_scroll_pagination: ^3.2.0
   json_annotation: ^4.8.1
   logger: ^1.4.0
+  path_provider: ^2.0.15
   retrofit: ^4.0.1
   retrofit_generator: ^7.0.1
   webview_flutter: ^4.2.2
