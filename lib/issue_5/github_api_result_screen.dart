@@ -1,8 +1,8 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_study/github_api_client.dart';
-import 'package:flutter_study/github_repository.dart';
+import 'package:flutter_study/issue_5/github_api_client.dart';
+import 'package:flutter_study/issue_5/github_repository.dart';
 import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
 
 class GithubAPIAppResult extends StatefulWidget {

@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_study/github_owner.dart';
+import 'package:flutter_study/issue_5/github_owner.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'github_repository.g.dart';

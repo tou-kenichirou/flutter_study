@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_study/github_api_screen.dart';
+import 'package:flutter_study/issue_6/news_api_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -8,13 +8,13 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  String get title => 'Flutter_issue5_GithubAPI';
+  String get title => 'Flutter_issue6_NewsAPI';
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      home: GithubAPIApp(title: title,),
+      home: NewsAPIApp(title: title,),
     );
   }
 }
