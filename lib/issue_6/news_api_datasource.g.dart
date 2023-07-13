@@ -6,7 +6,8 @@ part of 'news_api_datasource.dart';
 // RetrofitGenerator
 // **************************************************************************
 
-// ignore_for_file: unnecessary_brace_in_string_interps,no_leading_underscores_for_local_identifiers
+// ignore_for_file: unnecessary_brace_in_string_interps,
+// no_leading_underscores_for_local_identifiers
 
 class _NewsApiDatasource implements NewsApiDatasource {
   _NewsApiDatasource(
@@ -28,35 +29,36 @@ class _NewsApiDatasource implements NewsApiDatasource {
     int? pageSize,
     String? query,
   ) async {
-    const _extra = <String, dynamic>{};
+    const extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{
       r'category': category,
       r'country': country,
       r'page': page,
       r'pageSize': pageSize,
       r'q': query,
-    };
-    queryParameters.removeWhere((k, v) => v == null);
-    final _headers = <String, dynamic>{};
-    final Map<String, dynamic>? _data = null;
-    final _result = await _dio
-        .fetch<Map<String, dynamic>>(_setStreamType<NewsUpdateResponse>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
+    }..removeWhere((k, v) => v == null);
+    final headers = <String, dynamic>{};
+    final result = await _dio.fetch<Map<String, dynamic>>(
+      _setStreamType<NewsUpdateResponse>(
+        Options(
+          method: 'GET',
+          headers: headers,
+          extra: extra,
+        )
             .compose(
               _dio.options,
               '/v2/top-headlines',
               queryParameters: queryParameters,
-              data: _data,
             )
             .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            ))));
-    final value = NewsUpdateResponse.fromJson(_result.data!);
+              baseUrl: _combineBaseUrls(
+                _dio.options.baseUrl,
+                baseUrl,
+              ),
+            ),
+      ),
+    );
+    final value = NewsUpdateResponse.fromJson(result.data!);
     return value;
   }
 
