@@ -9,31 +9,26 @@ class CountryDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final children = <Widget>[];
-
-    final List<Widget> countryTiles = Country.values
-        .map(
-          (country) => ListTile(
-            title: Text(
-              country.name,
-              style: const TextStyle(
-                color: Colors.white,
-                fontSize: 20,
-              ),
-            ),
-            onTap: () => onTap(country),
+    final countryTiles = Country.values.map(
+      (country) => ListTile(
+        title: Text(
+          country.name,
+          style: const TextStyle(
+            color: Colors.white,
+            fontSize: 20,
           ),
-        )
-        .toList();
-
-    children
-      ..add(const NewsHeaderDrawer(headerTitle: '国一覧'))
-      ..addAll(countryTiles);
+        ),
+        onTap: () => onTap(country),
+      ),
+    );
 
     return Drawer(
       backgroundColor: Colors.black,
       child: ListView(
-        children: children,
+        children: <Widget>[
+          const NewsHeaderDrawer(headerTitle: '国一覧'),
+          ...countryTiles,
+        ],
       ),
     );
   }

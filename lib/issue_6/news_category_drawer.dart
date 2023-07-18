@@ -9,31 +9,26 @@ class NewsCategoryDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final children = <Widget>[];
-
-    final categoryTiles = NewsCategory.values
-        .map(
-          (category) => ListTile(
-            title: Text(
-              category.name,
-              style: const TextStyle(
-                color: Colors.white,
-                fontSize: 20,
-              ),
-            ),
-            onTap: () => onTap(category),
+    final categoryTiles = NewsCategory.values.map(
+      (category) => ListTile(
+        title: Text(
+          category.name,
+          style: const TextStyle(
+            color: Colors.white,
+            fontSize: 20,
           ),
-        )
-        .toList();
-
-    children
-      ..add(const NewsHeaderDrawer(headerTitle: 'カテゴリー 一覧'))
-      ..addAll(categoryTiles);
+        ),
+        onTap: () => onTap(category),
+      ),
+    );
 
     return Drawer(
       backgroundColor: Colors.black,
       child: ListView(
-        children: children,
+        children: <Widget>[
+          const NewsHeaderDrawer(headerTitle: 'カテゴリー 一覧'),
+          ...categoryTiles,
+        ],
       ),
     );
   }
