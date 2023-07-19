@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_study/github_api_result_screen.dart';
+import 'package:flutter_study/issue_5/github_api_result_screen.dart';
 
 class GithubAPIApp extends StatefulWidget {
   const GithubAPIApp({super.key, required this.title});
